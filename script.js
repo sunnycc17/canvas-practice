@@ -70,6 +70,7 @@ const c = canvas.getContext("2d");
 // }
 
 let x = 200;
+let y = 200;
 let dx = 4;
 let dy = 4;
 let radius = 50;
@@ -87,6 +88,9 @@ function animate() {
 
   if (x + radius > innerWidth || x - radius < 0) {
     dx = -dx;
+  }
+    if (y + radius > innerHeight || y - radius < 0) {
+    dy = -dy;
   }
   x += dx;
   y += dy;
